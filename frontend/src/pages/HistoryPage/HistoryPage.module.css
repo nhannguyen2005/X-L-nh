@@ -1,0 +1,251 @@
+.page {
+  padding: var(--space-6) 0 var(--space-12) 0;
+  flex: 1;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.subtitle {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  max-width: 65ch;
+  line-height: 1.5;
+  margin-top: 4px;
+}
+
+.searchForm {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+  max-width: 500px;
+}
+
+.searchWrapper {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 12px;
+  color: var(--color-text-muted);
+}
+
+.searchInput {
+  width: 100%;
+  height: 38px;
+  padding: 0 12px 0 36px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  font-size: var(--text-sm);
+}
+
+.searchInput:focus {
+  outline: 2px solid var(--color-focus);
+}
+
+/* Desktop Table View */
+.tableCard {
+  overflow-x: auto;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .tableCard {
+    display: block;
+  }
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: var(--text-sm);
+}
+
+.table th {
+  padding: 12px 16px;
+  background-color: var(--color-surface-2);
+  color: var(--color-text-muted);
+  font-weight: 600;
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table tr:hover td {
+  background-color: rgba(0, 0, 0, 0.015);
+}
+
+.numCol {
+  text-align: right;
+}
+
+.actionCol {
+  text-align: center;
+  width: 60px;
+}
+
+.timeCell {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.fileCell {
+  font-weight: 500;
+}
+
+.fileRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.fileIcon {
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.fileName {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.countBadge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  font-weight: 700;
+}
+
+.countPositive {
+  background-color: var(--color-accent-soft);
+  color: var(--color-accent-ink);
+}
+
+.countZero {
+  background-color: var(--color-surface-2);
+  color: var(--color-text-muted);
+}
+
+.chipsRow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.classChip {
+  font-size: 11px;
+  background-color: var(--color-surface-2);
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+
+.noClasses {
+  font-size: var(--text-xs);
+  color: var(--color-text-subtle);
+  font-style: italic;
+}
+
+.delBtn {
+  color: var(--color-text-muted);
+  padding: 6px;
+  border-radius: var(--radius-sm);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.delBtn:hover {
+  color: var(--status-error);
+  background-color: var(--status-error-soft);
+}
+
+/* Mobile List View */
+.mobileList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+@media (min-width: 768px) {
+  .mobileList {
+    display: none;
+  }
+}
+
+.mobileCard {
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.mobileCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobileMetaRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  flex-wrap: wrap;
+}
+
+.emptyCard {
+  padding: var(--space-6);
+}
+
+.loadingBox {
+  padding: var(--space-12) 0;
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+.pagination {
+  margin-top: var(--space-8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}

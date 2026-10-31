@@ -1,0 +1,94 @@
+/* UI_UX.md §14.2.2, §14.3.2, §14.4 - Centralized Design Tokens */
+:root {
+  /* Fonts */
+  --font-sans: "Be Vietnam Pro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Typography scale */
+  --text-xs:   0.75rem;  /* 12px */
+  --text-sm:   0.875rem; /* 14px */
+  --text-base: 1rem;     /* 16px */
+  --text-lg:   1.125rem; /* 18px */
+  --text-xl:   1.375rem; /* 22px */
+  --text-2xl:  1.75rem;  /* 28px */
+  --text-3xl:  2.5rem;   /* 40px */
+
+  /* Neutral Zinc - background & surfaces */
+  --color-bg:            #FAFAFA;
+  --color-surface:       #FFFFFF;
+  --color-surface-2:     #F4F4F5;
+  --color-border:        #E4E4E7;
+  --color-border-strong: #D4D4D8;
+
+  /* Typography colors */
+  --color-text:          #18181B; /* 17.7:1 on white */
+  --color-text-muted:    #52525B; /* 7.7:1 */
+  --color-text-subtle:   #71717A; /* 4.8:1 */
+
+  /* One Accent Rule: Teal */
+  --color-accent:        #0F766E; /* 5.5:1 with white text */
+  --color-accent-hover:  #115E59;
+  --color-accent-soft:   #CCFBF1;
+  --color-accent-ink:    #134E4A;
+  --color-focus:         #0F766E;
+
+  /* Sign Group Colors (Data) */
+  --sign-prohibitory:      #C8102E; /* Biển cấm */
+  --sign-prohibitory-soft: #FDECEE;
+  --sign-danger:           #F2B705; /* Biển nguy hiểm (viền/nền) */
+  --sign-danger-ink:       #8A6100; /* chữ trên nền trắng */
+  --sign-danger-soft:      #FEF6D8;
+  --sign-mandatory:        #0B5CAD; /* Biển hiệu lệnh */
+  --sign-mandatory-soft:   #E7F0FA;
+  --sign-guide:            #1E3A8A; /* Biển chỉ dẫn */
+  --sign-guide-soft:       #E8ECF7;
+  --sign-unknown:          #52525B; /* Chưa có trong catalog */
+
+  /* Status Colors */
+  --status-uncertain:      #B45309; /* Cần xác minh */
+  --status-uncertain-soft: #FEF3C7;
+  --status-error:          #B91C1C;
+  --status-error-soft:     #FEE2E2;
+  --status-info:           #0369A1;
+  --status-info-soft:      #E0F2FE;
+
+  /* Spacing - 4px grid */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-full: 999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgb(24 24 27 / 0.06);
+  --shadow-md: 0 4px 12px rgb(24 24 27 / 0.08);
+
+  /* Motion */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast:    120ms;
+  --dur-base:    200ms;
+  --dur-slow:    320ms;
+
+  /* Layout */
+  --nav-height: 64px;
+  --content-max: 1280px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

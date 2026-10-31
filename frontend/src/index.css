@@ -1,0 +1,4 @@
+/* Central design system entry point */
+@import './styles/tokens.css';
+@import './styles/base.css';
+@import './styles/utilities.css';

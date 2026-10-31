@@ -1,0 +1,25 @@
+.glyph {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.prohibitory {
+  color: var(--sign-prohibitory);
+}
+
+.danger {
+  color: var(--sign-danger);
+}
+
+.mandatory {
+  color: var(--sign-mandatory);
+}
+
+.guide {
+  color: var(--sign-guide);
+}
+
+.unknown {
+  color: var(--sign-unknown);
+}

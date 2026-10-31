@@ -1,0 +1,182 @@
+.page {
+  padding: var(--space-6) 0 var(--space-12) 0;
+  flex: 1;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.title {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.subtitle {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* Card */
+.card {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cardIcon {
+  color: var(--color-accent);
+}
+
+.cardTitle {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.callout {
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-surface-2);
+  border-left: 3px solid var(--color-accent);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-xs);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* Signs Grid */
+.signsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+@media (min-width: 600px) {
+  .signsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.signPill {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 8px 12px;
+  background-color: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: var(--text-xs);
+  transition: all var(--dur-fast) var(--ease-out);
+}
+
+.signPill:hover {
+  background-color: var(--color-surface);
+  border-color: var(--color-accent);
+  transform: translateX(2px);
+}
+
+.signCode {
+  font-weight: 700;
+  color: var(--color-accent-ink);
+  min-width: 50px;
+}
+
+.signName {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* List */
+.list {
+  padding-left: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.list li {
+  line-height: 1.6;
+}
+
+/* Legal Quote */
+.legalQuote {
+  padding: var(--space-4);
+  background-color: var(--color-surface-2);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* Tech Grid */
+.techGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+@media (min-width: 600px) {
+  .techGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.techItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--space-3);
+  background-color: var(--color-surface-2);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+}
+
+.techKey {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.techVal {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text);
+}

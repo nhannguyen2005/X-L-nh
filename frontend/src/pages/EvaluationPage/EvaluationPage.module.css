@@ -1,0 +1,243 @@
+.page {
+  padding: var(--space-6) 0 var(--space-12) 0;
+  flex: 1;
+}
+
+.header {
+  margin-bottom: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.title {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.description {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  max-width: 72ch;
+  line-height: 1.6;
+}
+
+.emptyCard {
+  padding: var(--space-8);
+}
+
+.loadingBox {
+  padding: var(--space-12) 0;
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+/* Bento Grid: 4 columns desktop */
+.bentoGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 600px) {
+  .bentoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .bentoGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.bentoCell {
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.colSpan2 {
+  grid-column: span 1;
+}
+
+@media (min-width: 600px) {
+  .colSpan2 {
+    grid-column: span 2;
+  }
+}
+
+.colSpanFull {
+  grid-column: 1 / -1;
+}
+
+.cellHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.cellIcon {
+  color: var(--color-accent);
+}
+
+.cellTitle {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+/* Info Grid */
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+@media (min-width: 600px) {
+  .infoGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.infoLabel {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+.infoVal {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-top: 2px;
+}
+
+/* Metric Card */
+.metricCard {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6) var(--space-4);
+}
+
+.metricLabel {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.metricVal {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--color-accent-ink);
+  line-height: 1.1;
+  margin: var(--space-1) 0;
+}
+
+.metricSub {
+  font-size: 11px;
+  color: var(--color-text-subtle);
+}
+
+/* Latency Grid */
+.latencyGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+@media (min-width: 600px) {
+  .latencyGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.latencyItem {
+  background-color: var(--color-surface-2);
+  padding: var(--space-3);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.totalLatency {
+  background-color: var(--color-accent-soft);
+  border-color: rgba(15, 118, 110, 0.2);
+}
+
+.totalLatency .latencyVal {
+  color: var(--color-accent-ink);
+}
+
+.latencyLabel {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.latencyVal {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+/* Plot images */
+.plotImgWrap {
+  width: 100%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background-color: #FFFFFF;
+}
+
+.plotImg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Table */
+.tableScroll {
+  overflow-x: auto;
+}
+
+.classTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+  text-align: left;
+}
+
+.classTable th {
+  padding: 10px 14px;
+  background-color: var(--color-surface-2);
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.classTable td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.classTable tr:last-child td {
+  border-bottom: none;
+}
+
+.numCol {
+  text-align: right;
+}
+
+.classNameCell {
+  font-weight: 500;
+  color: var(--color-text);
+}

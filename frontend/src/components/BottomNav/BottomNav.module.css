@@ -1,0 +1,46 @@
+.bottomNav {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  z-index: 100;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+@media (min-width: 768px) {
+  .bottomNav {
+    display: none;
+  }
+}
+
+.tab {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-height: 48px;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 500;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.tab:active {
+  background-color: var(--color-surface-2);
+}
+
+.tab.active {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.tabLabel {
+  line-height: 1;
+}
